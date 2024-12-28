@@ -1,73 +1,140 @@
-/* Reset some default styles */
-body, h1, h2, h3, p {
-    margin: 0;
-    padding: 0;
-}
+/* Importing Bebas Neue font */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-/* General body styles */
+/* General Page Styles */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
+    font-family: 'Bebas Neue', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #ffffff; /* Set background to white */
+    color: #000000; /* Set text color to black */
 }
 
-/* Header styles */
 header {
-    background-color: #007BFF;
-    color: white;
-    padding: 20px 0;
+    background-color: #ffffff;
+    padding: 10px 20px;
     text-align: center;
-}
-
-header h1 {
-    margin-bottom: 10px;
-    font-size: 2.5em;
-}
-
-header p {
-    font-size: 1.2em;
-}
-
-/* Navigation styles */
-nav {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+    border-bottom: 1px solid #ccc;
 }
 
 nav a {
-    color: #fff;
-    text-decoration: none;
+    color: #000000;
     margin: 0 15px;
-    font-size: 1.1em;
+    text-decoration: none;
+    font-size: 18px;
 }
 
-nav a:hover {
-    text-decoration: underline;
+nav a.active {
+    font-weight: bold;
 }
 
-/* Main content styles */
-main {
+main.contact-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.contact-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.contact-image,
+.contact-form-container {
+    flex: 1;
     padding: 20px;
 }
 
-section {
+.contact-image {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.contact-image img {
+    width: 100%;
+    height: 400px; /* Increased height */
+    object-fit: cover; /* Ensures the image fills the container without distortion */
+    background-color: #ffffff;
+}
+
+.contact-form-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+}
+
+.contact-form-container h1 {
+    font-size: 36px;
+    color: #000000;
     margin-bottom: 20px;
-    padding: 20px;
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer styles */
+.contact-form-container p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form .form-group {
+    display: flex;
+    gap: 15px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 0; /* Removed rounded corners */
+    background-color: #f9f9f9;
+    color: #000000;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0; /* Removed rounded corners */
+    background-color: #000000; /* Black button */
+    color: #ffffff; /* White text */
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+form button:hover {
+    background-color: #333333;
+}
+
+/* Center Dividing Line */
+.contact-container::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 80%;
+    background-color: #ccc;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Footer */
 footer {
+    background-color: #ffffff;
+    color: #000000;
     text-align: center;
-    background: #333;
-    color: #fff;
     padding: 10px 0;
-    margin-top: 20px;
+    margin-top: 50px;
+    border-top: 1px solid #ccc;
 }
