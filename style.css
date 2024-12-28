@@ -1,25 +1,45 @@
-/* Importing Bebas Neue font */
+/* Importing Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;700&display=swap');
 
 /* General Page Styles */
 body {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff; /* Set background to white */
-    color: #000000; /* Set text color to black */
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6; /* Consistent line height for better readability */
 }
 
+/* Header Styles */
 header {
-    background-color: #ffffff;
-    padding: 10px 20px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 0;
+    margin: 0;
     border-bottom: 1px solid #ccc;
+    position: relative;
+}
+
+.nav-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    flex: 1;
+    text-align: left;
 }
 
 nav a {
+    font-family: 'Bebas Neue', sans-serif;
     color: #000000;
-    margin: 0 15px;
+    margin-right: 20px;
     text-decoration: none;
     font-size: 18px;
 }
@@ -28,58 +48,130 @@ nav a.active {
     font-weight: bold;
 }
 
-main.contact-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 20px;
-}
-
-.contact-container {
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.contact-image,
-.contact-form-container {
+.logo-container {
     flex: 1;
-    padding: 20px;
+    text-align: right;
+    padding-top: 10px;
 }
 
-.contact-image {
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
+.logo-container img {
+    max-width: 300px;
+    height: auto;
 }
 
-.contact-image img {
-    width: 100%;
-    height: 400px; /* Increased height */
-    object-fit: cover; /* Ensures the image fills the container without distortion */
-    background-color: #ffffff;
-}
-
-.contact-form-container {
-    display: flex;
-    flex-direction: column;
-    padding-left: 40px;
-}
-
-.contact-form-container h1 {
+/* Global h1 Styles */
+h1 {
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 36px;
     color: #000000;
-    margin-bottom: 20px;
+    text-align: left;
+    margin: 10px 0 20px 0;
 }
 
-.contact-form-container p {
-    margin-bottom: 20px;
+/* Global p Styles */
+p {
+    font-family: 'Helvetica Neue', sans-serif;
     font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6; /* Consistent line spacing */
+    word-spacing: normal; /* Prevent excessive word spacing */
+    text-align: justify; /* Ensure even text alignment */
+    hyphens: auto; /* Allow hyphenation for better word wrapping */
+    overflow-wrap: break-word; /* Break long words if necessary */
 }
 
+/* General Layout for Pages */
+main.contact-page,
+main.workshops-page,
+main.about-page,
+main.homepage {
+    padding: 30px 20px;
+}
+
+.contact-container,
+.workshops-container,
+.about-container,
+.homepage-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Homepage Layout */
+main.homepage {
+    padding: 30px 20px;
+}
+
+.homepage-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+@media (min-width: 769px) {
+    .homepage-container {
+        align-items: flex-start; /* Align to the left on desktop */
+    }
+}
+
+/* About Page Layout */
+main.about-page {
+    padding: 30px 20px;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+@media (min-width: 769px) {
+    .about-container {
+        align-items: flex-start; /* Align to the left on desktop */
+    }
+}
+
+/* Workshops Page Layout */
+main.workshops-page {
+    padding: 30px 20px;
+}
+
+.workshops-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (min-width: 769px) {
+    .workshops-container {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        gap: 40px;
+    }
+}
+
+/* Image Styling */
+.contact-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+}
+
+.contact-form-container {
+    flex: 1;
+}
+
+/* Form Styles */
 form {
     display: flex;
     flex-direction: column;
@@ -88,7 +180,8 @@ form {
 
 form .form-group {
     display: flex;
-    gap: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 form input,
@@ -96,19 +189,18 @@ form textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 0; /* Removed rounded corners */
     background-color: #f9f9f9;
     color: #000000;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 18px;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 16px;
 }
 
 form button {
     padding: 10px 20px;
     border: none;
-    border-radius: 0; /* Removed rounded corners */
-    background-color: #000000; /* Black button */
-    color: #ffffff; /* White text */
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Bebas Neue', sans-serif;
     font-weight: bold;
     cursor: pointer;
     text-transform: uppercase;
@@ -118,18 +210,7 @@ form button:hover {
     background-color: #333333;
 }
 
-/* Center Dividing Line */
-.contact-container::before {
-    content: "";
-    position: absolute;
-    width: 1px;
-    height: 80%;
-    background-color: #ccc;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* Footer */
+/* Footer Styles */
 footer {
     background-color: #ffffff;
     color: #000000;
@@ -137,4 +218,56 @@ footer {
     padding: 10px 0;
     margin-top: 50px;
     border-top: 1px solid #ccc;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* Responsive Design */
+
+/* For screens smaller than 768px (tablets and phones) */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    nav a {
+        margin-right: 0;
+        margin-bottom: 5px;
+        font-size: 16px;
+    }
+
+    .logo-container {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 14px;
+        text-align: left; /* Prevent justification issues */
+        word-spacing: normal; /* Prevent uneven spacing */
+        hyphens: auto; /* Allow hyphenation for better word wrapping */
+        overflow-wrap: break-word; /* Break long words if necessary */
+    }
+
+    .contact-container,
+    .workshops-container,
+    .about-container,
+    .homepage-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-image img {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
 }
