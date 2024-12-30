@@ -1,10 +1,12 @@
-/* Importing Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;700&display=swap');
+/* Variables for Font Stacks */
+:root {
+    --font-family-sans-serif: "Bebas Neue", serif;
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
 
 /* General Page Styles */
 body {
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: var(--font-family-sans-serif);
     margin: 0;
     padding: 0;
     background-color: #ffffff;
@@ -12,202 +14,150 @@ body {
     line-height: 1.6; /* Consistent line height for better readability */
 }
 
-/* Header Styles */
-header {
+/* Header Navigation Container */
+.nav-header {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5px 0;
-    margin: 0;
-    border-bottom: 1px solid #ccc;
-    position: relative;
-}
-
-.nav-container {
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #ffffff;
+    position: relative;
+    border-bottom: 1px solid #ccc;
 }
 
-nav {
-    flex: 1;
-    text-align: left;
-}
-
-nav a {
-    font-family: 'Bebas Neue', sans-serif;
-    color: #000000;
-    margin-right: 20px;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-nav a.active {
-    font-weight: bold;
-}
-
+/* Logo Center Alignment */
 .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex: 1;
-    text-align: right;
-    padding-top: 10px;
+    text-align: center;
+    margin: 0; /* Remove padding or margin for precise alignment */
+    position: relative;
+    top: -35px; /* Push the logo upwards */
 }
 
 .logo-container img {
-    max-width: 300px;
+    max-width: 300px; /* Adjust the size as needed */
     height: auto;
 }
 
-/* Global h1 Styles */
-h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 36px;
-    color: #000000;
-    text-align: left;
-    margin: 10px 0 20px 0;
-}
-
-/* Global p Styles */
-p {
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: 16px;
-    margin-bottom: 20px;
-    line-height: 1.6; /* Consistent line spacing */
-    word-spacing: normal; /* Prevent excessive word spacing */
-    text-align: justify; /* Ensure even text alignment */
-    hyphens: auto; /* Allow hyphenation for better word wrapping */
-    overflow-wrap: break-word; /* Break long words if necessary */
-}
-
-/* General Layout for Pages */
-main.contact-page,
-main.workshops-page,
-main.about-page,
-main.homepage {
-    padding: 30px 20px;
-}
-
-.contact-container,
-.workshops-container,
-.about-container,
-.homepage-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Homepage Layout */
-main.homepage {
-    padding: 30px 20px;
-}
-
-.homepage-container {
+/* Hamburger Menu */
+.hamburger {
+    position: absolute;
+    top: 45px;
+    left: 20px;
     display: flex;
     flex-direction: column;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 20px;
-}
-
-@media (min-width: 769px) {
-    .homepage-container {
-        align-items: flex-start; /* Align to the left on desktop */
-    }
-}
-
-/* About Page Layout */
-main.about-page {
-    padding: 30px 20px;
-}
-
-.about-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 20px;
-}
-
-@media (min-width: 769px) {
-    .about-container {
-        align-items: flex-start; /* Align to the left on desktop */
-    }
-}
-
-/* Workshops Page Layout */
-main.workshops-page {
-    padding: 30px 20px;
-}
-
-.workshops-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-@media (min-width: 769px) {
-    .workshops-container {
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: flex-start;
-        gap: 40px;
-    }
-}
-
-/* Image Styling */
-.contact-image img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    object-fit: cover;
-}
-
-.contact-form-container {
-    flex: 1;
-}
-
-/* Form Styles */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-form .form-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-form input,
-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
-    color: #000000;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: 16px;
-}
-
-form button {
-    padding: 10px 20px;
+    justify-content: space-around;
+    width: 45px;
+    height: 25px;
     border: none;
-    background-color: #000000;
-    color: #ffffff;
-    font-family: 'Bebas Neue', sans-serif;
-    font-weight: bold;
+    background: none;
     cursor: pointer;
-    text-transform: uppercase;
+    z-index: 1000;
 }
 
-form button:hover {
-    background-color: #333333;
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #000;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Transform the hamburger to an "X" when menu is active */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0; /* Hide the middle line */
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 50%;
+}
+
+/* Overlay Menu */
+#overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    transform: translateY(-100%);
+    z-index: 1000; /* Overlay menu appears above other elements */
+}
+
+#overlay-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#overlay-menu ul li {
+    margin: 20px 0;
+}
+
+#overlay-menu ul li a {
+    font-family: "Bebas Neue", serif;
+    font-size: 1.5rem;
+    color: #000;
+    text-decoration: none;
+}
+
+.hidden {
+    transform: translateY(-100%);
+}
+
+#overlay-menu.active {
+    transform: translateY(0);
+}
+
+/* Contact Form Container */
+.contact-form-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-form-container h1 {
+    font-family: "Bebas Neue", serif;
+    font-size: 36px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.contact-form-container p {
+    font-family: var(--font-family-sans-serif);
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Embedded Google Form Styling */
+.contact-form-container iframe {
+    width: 100%;
+    max-width: 640px;
+    height: 855px;
+    border: none;
+    margin: 20px 0;
+    z-index: 1; /* Ensure it's below the overlay */
 }
 
 /* Footer Styles */
@@ -218,7 +168,7 @@ footer {
     padding: 10px 0;
     margin-top: 50px;
     border-top: 1px solid #ccc;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: var(--font-family-sans-serif);
 }
 
 /* Responsive Design */

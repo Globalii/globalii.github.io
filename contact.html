@@ -1,48 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us</title>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
 <body>
     <header>
-        <div class="nav-container">
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="workshops.html">Workshops and Trainings</a>
-                <a href="contact.html" class="active">Contact Us</a>
-            </nav>
+        <div class="nav-header">
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger" id="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <!-- Logo -->
             <div class="logo-container">
-                <img src="images/Giilogo2.png" alt="Logo">
+                <a href="index.html">
+                    <img src="images/Giilogo9.png" alt="Logo">
+                </a>
             </div>
         </div>
+    
+        <!-- Overlay Navigation Menu -->
+        <nav id="overlay-menu" class="hidden">
+            <ul>
+                <li><a href="index.html" class="{activeClass('index.html')}">Home</a></li>
+                <li><a href="about.html" class="{activeClass('about.html')}">About Us</a></li>
+                <li><a href="workshops.html" class="{activeClass('workshops.html')}">Workshops and Trainings</a></li>
+                <li><a href="contact.html" class="{activeClass('contact.html')}">Contact Us</a></li>
+            </ul>
+        </nav>
     </header>
+    
 
     <main class="contact-page">
         <div class="contact-container">
-            <!-- Moved contact form container first -->
+            <!-- Embedded Google Form -->
             <div class="contact-form-container">
                 <h1>Contact</h1>
-                <p>Contact us for any queries or requests.</p>
-                <form id="contactForm">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Name" required>
-                        <input type="email" id="email" name="email" placeholder="Email" required>
-                    </div>
-                    <textarea id="message" name="message" rows="4" placeholder="How Can We Help?"></textarea>
-                    <button type="submit">Send</button>
-                </form>
-                <p>Email: <a href="mailto:info@globalii.net">info@globalii.net</a></p>
-                <p>Office Hours:<br>Monday-Saturday: 10:00 AM - 6:00 PM</p>
-                <p>Phone: 020 7351 6543</p>
-            </div>
+                <p>
+                    Please submit your inquiries using the form below or reach out to us through the following contact methods:
+                </p>
+                <ul>
+                    <p><strong>Email:</strong> <a href="mailto:info@globalii.net">info@globalii.net</a></p>
+                    <p><strong>Phone:</strong> 020 7351 6543</p>
+                    <p><strong>Office Hours:</strong> Monday-Saturday: 10:00 AM - 6:00 PM</p>
 
-            <!-- Moved contact image container second -->
-            <div class="contact-image">
-                <img src="images/Giilogo2.png" alt="Contact Image">
+                </ul>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdyG1ghrcImqWxgPaXPcRzgMl6JAJNP9W1eQJ_uSWWqfpsvvw/viewform?embedded=true" width="640" height="855" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
             </div>
         </div>
     </main>
@@ -50,5 +61,6 @@
     <footer>
         <p>&copy; 2024 Global Interpreting Innovations. All rights reserved.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
