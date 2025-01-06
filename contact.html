@@ -13,27 +13,26 @@
 <body>
     <header>
         <div class="nav-header">
-            <!-- Hamburger Menu Button -->
-            <button class="hamburger" id="hamburger-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
             <!-- Logo -->
             <div class="logo-container">
                 <a href="index.html">
-                    <img src="images/Giilogo9.png" alt="Logo">
+                    <img src="images/Giilogosvg.svg" alt="Logo">
                 </a>
             </div>
         </div>
-    
+
+        <!-- Menu Button -->
+        <button class="menu-btn" id="menu-btn" aria-label="Menu">Menu</button>
+                
         <!-- Overlay Navigation Menu -->
         <nav id="overlay-menu" class="hidden">
+            <button class="close-btn" aria-label="Close">Close</button>
+
             <ul>
-                <li><a href="index.html" class="{activeClass('index.html')}">Home</a></li>
-                <li><a href="about.html" class="{activeClass('about.html')}">About Us</a></li>
-                <li><a href="workshops.html" class="{activeClass('workshops.html')}">Workshops and Trainings</a></li>
-                <li><a href="contact.html" class="{activeClass('contact.html')}">Contact Us</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="workshops.html">Workshops and Trainings</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -45,7 +44,7 @@
             <div class="contact-form-container">
                 <h1>Contact</h1>
                 <p>
-                    Please submit your inquiries using the form below or reach out to us through the following contact methods:
+                    To register for upcoming sessions or submit inquiries, please use the form below or contact us directly through the provided methods.
                 </p>
                 <ul>
                     <p><strong>Email:</strong> <a href="mailto:info@globalii.net">info@globalii.net</a></p>

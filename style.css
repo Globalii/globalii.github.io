@@ -1,17 +1,36 @@
-/* Variables for Font Stacks */
+/* Variables for Font Stacks and Colors */
 :root {
-    --font-family-sans-serif: "Bebas Neue", serif;
-    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --font-family-sans-serif: "Bebas Neue", sans-serif;
+    --color-primary: #000;
+    --color-background: #fff;
+    --color-overlay: rgba(255, 255, 255, 0.95);
+    --color-border: #000000;
+    --color-heading: #990011; /* New variable for headings and bold text */
+    --font-size-base: 16px;
+    --font-size-large: 1.5rem;
+    --font-size-small: 0.875rem;
+    --spacing-base: 16px;
 }
 
 /* General Page Styles */
-body {
-    font-family: var(--font-family-sans-serif);
+html, body {
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
-    color: #000000;
-    line-height: 1.6; /* Consistent line height for better readability */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body {
+    font-family: var(--font-family-sans-serif);
+    color: var(--color-primary);
+    line-height: 1.6;
+}
+
+main {
+    flex: 1;
+    overflow-x: visible; /* Ensure content like the contact form displays fully */
 }
 
 /* Header Navigation Container */
@@ -19,69 +38,43 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background: #ffffff;
-    position: relative;
-    border-bottom: 1px solid #ccc;
+    padding: var(--spacing-base) calc(var(--spacing-base) * 1.25);
+    background: url('images/bg6.jpeg') center/cover, var(--color-background);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid var(--color-border);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Logo Center Alignment */
+/* Logo Container */
 .logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    text-align: center;
-    margin: 0; /* Remove padding or margin for precise alignment */
-    position: relative;
-    top: -35px; /* Push the logo upwards */
+    order: 0;
+    margin-right: auto;
+    padding: 0;
 }
 
 .logo-container img {
-    max-width: 300px; /* Adjust the size as needed */
+    max-width: 125px;
     height: auto;
 }
 
-/* Hamburger Menu */
-.hamburger {
-    position: absolute;
-    top: 45px;
-    left: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 45px;
-    height: 25px;
-    border: none;
+/* Menu Button */
+.menu-btn {
+    font-family: var(--font-family-sans-serif);
+    font-size: var(--font-size-large);
+    color: var(--color-primary);
     background: none;
+    border: none;
     cursor: pointer;
-    z-index: 1000;
+    transition: color 0.3s ease;
+    margin: var(--spacing-base) calc(var(--spacing-base) * 1.25);
+    float: right;
+    padding: 10px 20px;
 }
 
-.hamburger span {
-    display: block;
-    width: 100%;
-    height: 3px;
-    background: #000;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
-
-/* Transform the hamburger to an "X" when menu is active */
-.hamburger.active span:nth-child(1) {
-    transform: rotate(45deg);
-    position: absolute;
-    top: 50%;
-}
-
-.hamburger.active span:nth-child(2) {
-    opacity: 0; /* Hide the middle line */
-}
-
-.hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg);
-    position: absolute;
-    top: 50%;
+.menu-btn:hover {
+    color: #555;
 }
 
 /* Overlay Menu */
@@ -91,21 +84,27 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--color-overlay);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: transform 0.3s ease;
     transform: translateY(-100%);
-    z-index: 1000; /* Overlay menu appears above other elements */
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    box-sizing: border-box;
 }
 
+/* Prevent extra width from padding/margins */
 #overlay-menu ul {
     list-style: none;
     padding: 0;
     margin: 0;
     text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 #overlay-menu ul li {
@@ -113,111 +112,141 @@ body {
 }
 
 #overlay-menu ul li a {
-    font-family: "Bebas Neue", serif;
-    font-size: 1.5rem;
-    color: #000;
+    font-size: 2.5rem;
+    color: var(--color-primary);
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.hidden {
-    transform: translateY(-100%);
+#overlay-menu ul li a:hover {
+    color: #555;
 }
 
 #overlay-menu.active {
     transform: translateY(0);
 }
 
-/* Contact Form Container */
-.contact-form-container {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.contact-form-container h1 {
-    font-family: "Bebas Neue", serif;
-    font-size: 36px;
-    color: #000;
-    margin-bottom: 20px;
-}
-
-.contact-form-container p {
+/* Close Button */
+.close-btn {
     font-family: var(--font-family-sans-serif);
-    font-size: 16px;
-    color: #000;
-    margin-bottom: 20px;
-    line-height: 1.6;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: calc(var(--font-size-large) * 0.9);
+    color: var(--color-primary);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    z-index: 1001;
 }
 
-/* Embedded Google Form Styling */
+.close-btn:hover {
+    color: #555;
+}
+
+/* Contact Form Specific Fix */
 .contact-form-container iframe {
-    width: 100%;
-    max-width: 640px;
+    width: 100%; /* Ensure the form takes up full width of its container */
+    max-width: 640px; /* Keep the form within its intended max width */
     height: 855px;
     border: none;
+    margin: 20px auto; /* Center the form horizontally */
+    display: block;
+    overflow-x: visible; /* Prevent cropping or hiding parts of the form */
+    box-sizing: border-box; /* Ensure proper sizing within the container */
+}
+
+/* Heading and Bold Text Styling */
+h1, h2, h3, h4, h5, h6, strong {
+    color: var(--color-heading); /* Apply the new color */
+}
+
+.about-image {
+    text-align: center;
     margin: 20px 0;
-    z-index: 1; /* Ensure it's below the overlay */
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 800px; /* Maximum size for larger screens */
+    height: auto;
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds subtle shadow */
+}
+
+.workshop-image {
+    text-align: lefter;
+    margin: 20px 0; /* Add some space above and below the image */
+}
+
+.workshop-image img {
+    width: 50%; /* Make the image responsive */
+    max-width: 300px; /* Limit the width for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
 }
 
 /* Footer Styles */
 footer {
-    background-color: #ffffff;
-    color: #000000;
+    background-image: url('images/bg5.jpeg');
+    background-color: var(--color-background);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: var(--color-primary);
     text-align: center;
-    padding: 10px 0;
-    margin-top: 50px;
-    border-top: 1px solid #ccc;
-    font-family: var(--font-family-sans-serif);
+    padding: var(--spacing-base);
+    margin-top: 0;
+    border-top: 3px solid var(--color-border);
+    font-size: var(--font-size-small);
 }
 
 /* Responsive Design */
-
-/* For screens smaller than 768px (tablets and phones) */
 @media (max-width: 768px) {
-    .nav-container {
+    html, body {
+        overflow-x: hidden; /* Ensure no horizontal scrolling on mobile */
+    }
+
+    .nav-header {
+        padding: var(--spacing-base) calc(var(--spacing-base) * 0.75);
+    }
+
+    .logo-container img {
+        max-width: 125px;
+    }
+
+    #overlay-menu ul li {
+        margin: 15px 0;
+    }
+
+    #overlay-menu ul li a {
+        font-size: 2.25rem;
+    }
+
+    .hero-section {
         flex-direction: column;
-        align-items: center;
-    }
-
-    nav {
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-    nav a {
-        margin-right: 0;
-        margin-bottom: 5px;
-        font-size: 16px;
-    }
-
-    .logo-container {
         text-align: center;
     }
 
-    h1 {
-        font-size: 28px;
-        text-align: center;
-    }
-
-    p {
-        font-size: 14px;
-        text-align: left; /* Prevent justification issues */
-        word-spacing: normal; /* Prevent uneven spacing */
-        hyphens: auto; /* Allow hyphenation for better word wrapping */
-        overflow-wrap: break-word; /* Break long words if necessary */
-    }
-
-    .contact-container,
-    .workshops-container,
-    .about-container,
-    .homepage-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-image img {
+    .hero-content, .hero-image {
         max-width: 100%;
-        margin-bottom: 20px;
+    }
+
+    .hero-image {
+        text-align: center;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+    }
+    .workshop-image img {
+        max-width: 50%; /* Ensure it doesn't exceed the screen width */
+    }
+    footer {
+        font-size: var(--font-size-small);
     }
 }

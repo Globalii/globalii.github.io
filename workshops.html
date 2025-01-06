@@ -1,40 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Workshops and Trainings</title>
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshops and Trainings</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
     <header>
         <div class="nav-header">
-            <!-- Hamburger Menu Button -->
-            <button class="hamburger" id="hamburger-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
             <!-- Logo -->
             <div class="logo-container">
                 <a href="index.html">
-                    <img src="images/Giilogo9.png" alt="Logo">
+                    <img src="images/Giilogosvg.svg" alt="Logo">
                 </a>
             </div>
-            
         </div>
-    
+
+        <!-- Menu Button -->
+        <button class="menu-btn" id="menu-btn" aria-label="Menu">Menu</button>
+                
         <!-- Overlay Navigation Menu -->
         <nav id="overlay-menu" class="hidden">
+            <button class="close-btn" aria-label="Close">Close</button>
+
             <ul>
-                <li><a href="index.html" class="{activeClass('index.html')}">Home</a></li>
-                <li><a href="about.html" class="{activeClass('about.html')}">About Us</a></li>
-                <li><a href="workshops.html" class="{activeClass('workshops.html')}">Workshops and Trainings</a></li>
-                <li><a href="contact.html" class="{activeClass('contact.html')}">Contact Us</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="workshops.html">Workshops and Trainings</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -45,6 +43,11 @@
             <h1>Workshops and Trainings</h1>
 
             <h2>40-Hour Community Interpreter® International</h2>
+            <!-- Image under the heading -->
+            <div class="workshop-image">
+                <img src="images/textbook.png" alt="Interactive workshop session">
+            </div>
+
             <p>Global Interpreting Innovations offers the <strong>40-Hour Community Interpreter® International</strong>, a nationally recognized training program designed to meet the needs of interpreters in medical, educational, and social service settings. This comprehensive course provides:</p>
             <ul>
                 <li>The foundational knowledge required for professional interpreting.</li>
@@ -118,14 +121,13 @@
             </ul>
 
             <h2>Join Us</h2>
-            <p>Take the next step in your interpreting career with Global Interpreting Innovations. Our workshops and trainings empower you with the tools and knowledge to succeed in a rapidly growing field. Register today and become part of a program that’s setting the standard for interpreter education!</p>
-        </div>
+            <p>Take the next step in your interpreting career with Global Interpreting Innovations. Our workshops and trainings empower you with the tools and knowledge to succeed in a rapidly growing field.</p>
+            <p>Visit our <a href="contact.html">Contact Us</a> page to get in touch and register today!</p>
+                    </div>
     </main>
 
     <footer>
         <p>&copy; 2024 Global Interpreting Innovations. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
-
-</body>
-</html>
+</bo
