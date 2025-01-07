@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Global Interpreting Innovations</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .faq-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            font-family: var(--font-family-sans-serif);
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            cursor: pointer;
+            background: #f9f9f9;
+            padding: 15px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--color-primary);
+            border-bottom: 1px solid #ddd;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #f1f1f1;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 15px;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-header">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/Giilogosvg.svg" alt="Logo">
+                </a>
+            </div>
+        </div>
+        <button class="menu-btn" id="menu-btn" aria-label="Menu">Menu</button>
+        <nav id="overlay-menu" class="hidden">
+            <button class="close-btn" aria-label="Close">Close</button>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="workshops.html">Workshops and Trainings</a></li>
+                <li><a href="faq.html" class="active">FAQ</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="faq-container">
+            <h1>FAQs: Understanding Community Interpreting and GII</h1>
+
+            <div class="faq-item">
+                <div class="faq-question">1. What is Global Interpreting Innovations (GII)?</div>
+                <div class="faq-answer">
+                    GII is a professional organization that provides training for interpreters in community settings such as healthcare, education, and social services. We equip interpreters with the skills and knowledge needed to communicate effectively and ethically, ensuring equitable access for diverse communities.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">2. What is community interpreting?</div>
+                <div class="faq-answer">
+                    Community interpreting is a specialized profession where interpreters facilitate communication in settings like:
+                    <ul>
+                        <li>Healthcare: Hospitals, clinics, and medical appointments.</li>
+                        <li>Education: Schools, parent-teacher conferences, and academic programs.</li>
+                        <li>Social Services: Government assistance programs and community organizations.</li>
+                    </ul>
+                    In the past, family or friends were often used as interpreters. Today, professional interpreters are preferred and, in many cases, required due to legal, ethical, and professional standards.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">3. Why is professional training important for interpreters?</div>
+                <div class="faq-answer">
+                    Professional training ensures that interpreters:
+                    <ul>
+                        <li>Are proficient in both languages they interpret.</li>
+                        <li>Understand cultural nuances and ethical standards.</li>
+                        <li>Provide accurate, impartial, and effective communication.</li>
+                    </ul>
+                    Federal laws, hospital accreditation agencies, and professional standards advocate for using qualified or certified interpreters to ensure equitable and clear communication in critical settings.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">4. What is the difference between a qualified and a certified interpreter?</div>
+                <div class="faq-answer">
+                    <strong>Qualified Interpreters:</strong> Must complete professional training, such as a 40-hour course, and demonstrate language proficiency.<br>
+                    <strong>Certified Interpreters:</strong> Go a step further by passing a recognized certification exam from organizations like the National Board of Certification for Medical Interpreters (NBCMI) or the Certification Commission for Healthcare Interpreters (CCHI).
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">5. What is a 40-hour interpreter training course?</div>
+                <div class="faq-answer">
+                    A 40-hour interpreter training course is widely regarded as the minimum standard for community interpreters. It provides foundational knowledge and skills in:
+                    <ul>
+                        <li>Interpreting techniques.</li>
+                        <li>Ethics and standards of practice.</li>
+                        <li>Language proficiency development.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">6. What is The Community Interpreter® program?</div>
+                <div class="faq-answer">
+                    The Community Interpreter® is a nationally recognized 40-hour training program tailored to aspiring community interpreters. It covers key topics, including:
+                    <ul>
+                        <li>Ethics and standards of practice.</li>
+                        <li>Techniques for consecutive and simultaneous interpreting.</li>
+                        <li>Cultural competence and professionalism.</li>
+                    </ul>
+                    GII is licensed to offer this program, ensuring participants receive high-quality training.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">7. Who can take the 40-hour training course?</div>
+                <div class="faq-answer">
+                    This course is ideal for:
+                    <ul>
+                        <li>Aspiring interpreters who are bilingual.</li>
+                        <li>Professionals looking to meet qualifications for community interpreting.</li>
+                        <li>Individuals starting a career in healthcare, education, or social services interpreting.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">8. Why is community interpreting important?</div>
+                <div class="faq-answer">
+                    Community interpreting plays a vital role by:
+                    <ul>
+                        <li>Ensuring equal access to services for individuals with limited English proficiency.</li>
+                        <li>Supporting compliance with federal civil rights legislation and state laws.</li>
+                        <li>Facilitating clear communication in crucial settings like healthcare and education.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">9. How can I become a certified interpreter?</div>
+                <div class="faq-answer">
+                    To become a certified interpreter:
+                    <ul>
+                        <li>Complete professional training, such as this 40-hour course.</li>
+                        <li>Pass a recognized certification exam from an organization like NBCMI or CCHI.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">10. What kind of jobs can I get after this course?</div>
+                <div class="faq-answer">
+                    Completing this course prepares you for roles such as:
+                    <ul>
+                        <li><strong>Community Interpreter:</strong> Work in healthcare, education, or social services.</li>
+                        <li><strong>Medical Interpreter:</strong> Work in hospitals or clinics.</li>
+                        <li><strong>Education Interpreter:</strong> Work in schools or academic programs.</li>
+                        <li><strong>Social Services Interpreter:</strong> Work in government or community programs.</li>
+                        <li><strong>Freelance (1099) Interpreter:</strong> Take jobs from multiple interpreting agencies as an independent contractor.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">12. How much does your course cost?</div>
+                <div class="faq-answer">
+                    The course costs $500. Payment plans are available to make it accessible for everyone.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">13. Where is the course offered?</div>
+                <div class="faq-answer">
+                    The course is offered online via Zoom, allowing participants to join from anywhere.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">11. How can I enroll in GII’s training programs?</div>
+                <div class="faq-answer">
+                    To enroll, visit our website’s <a href="contact.html">Contact Us</a> page and reach out to us. Our licensed trainers will guide you through the enrollment process and help you begin your journey as a professional interpreter.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Global Interpreting Innovations. All rights reserved.</p>
+    </footer>
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentNode;
+                parent.classList.toggle('open');
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

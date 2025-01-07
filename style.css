@@ -38,7 +38,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--spacing-base) calc(var(--spacing-base) * 1.25);
+    padding: 2px 16px; /* Reduced padding for a smaller header */
     background: url('images/bg6.jpeg') center/cover, var(--color-background);
     position: sticky;
     top: 0;
@@ -55,7 +55,7 @@ main {
 }
 
 .logo-container img {
-    max-width: 125px;
+    max-width: 100px;
     height: auto;
 }
 
@@ -199,7 +199,7 @@ footer {
     background-position: center;
     color: var(--color-primary);
     text-align: center;
-    padding: var(--spacing-base);
+    padding: 8px 16px;
     margin-top: 0;
     border-top: 3px solid var(--color-border);
     font-size: var(--font-size-small);
@@ -212,11 +212,11 @@ footer {
     }
 
     .nav-header {
-        padding: var(--spacing-base) calc(var(--spacing-base) * 0.75);
+        padding: 1px 10px; /* Smaller padding for mobile screens */
     }
 
     .logo-container img {
-        max-width: 125px;
+        max-width: 60px;
     }
 
     #overlay-menu ul li {
