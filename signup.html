@@ -3,17 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Global Interpreting Innovations</title>
-    <!-- Google Fonts -->
+    <title>Signup - Global Interpreting Innovations</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .button-link {
+            display: inline-block;
+            background-color: #00b4d8; /* Teal color */
+            color: #ffffff !important;
+            padding: 20px 40px; 
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.3s;
+            font-size: 1.5rem; 
+            margin-top: 20px;
+        }
+
+        .button-link:hover {
+            background-color: #0a2540; /* Navy on hover */
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="nav-header">
-            <!-- Logo -->
             <div class="logo-container">
                 <a href="index.html">
                     <img src="images/Giilogosvg.svg" alt="Logo">
@@ -21,13 +39,10 @@
             </div>
         </div>
 
-        <!-- Menu Button -->
         <button class="menu-btn" id="menu-btn" aria-label="Menu">Menu</button>
                 
-        <!-- Overlay Navigation Menu -->
         <nav id="overlay-menu" class="hidden">
             <button class="close-btn" aria-label="Close">Close</button>
-
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
@@ -39,25 +54,26 @@
         </nav>
     </header>
 
-    <!-- Page Content -->
-    <main>
-        <h1>Signup</h1>
+    <main style="max-width: 800px; margin: 50px auto; padding: 20px; text-align: center;">
+        <h1>Secure Your Spot & Register</h1>
         
-        <!-- Embedded Google Form -->
-        <section class="signup-form-container">
-            <h2>Sign Up for The 40-Hour Community Interpreter International Course</h2>
-            <div class="form-container">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSceQPopgX070GbKjk4aqbzYaqZc2ZwKfM-T-Z3ckfo3FP7bEw/viewform?embedded=true" 
-                    width="640" height="1293" frameborder="0" marginheight="0" marginwidth="0">
-                    Loading…
-                </iframe>
-            </div>
-        </section>
+        <p style="font-size: 1.1rem; margin-top: 20px;">
+            Ready to take the next step in your interpreting career? Click the button below to be taken to our secure, external registration form on Google Forms.
+        </p>
 
-       
+        <p style="color: #c0392b; font-weight: bold; margin-bottom: 30px;">
+            (You will be directed away from globalii.net to complete the form and payment.)
+        </p>
+
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSceQPopgX070GbKjk4aqbzYaqZc2ZwKfM-T-Z3ckfo3FP7bEw/viewform" class="button-link">
+            Proceed to Registration Form
+        </a>
+        
+        <p style="margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px; color: #555;">
+            **IMPORTANT:** Once the form is submitted, you will receive a direct link to the **Stripe payment gateway** to finalize your enrollment.
+        </p>
     </main>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Global Interpreting Innovations. All Rights Reserved.</p>
     </footer>
