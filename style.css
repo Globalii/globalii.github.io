@@ -184,10 +184,36 @@ h1, h2, h3, h4, h5, h6, strong {
 
 .workshop-image img {
     width: 50%; /* Make the image responsive */
-    max-width: 300px; /* Limit the width for larger screens */
+    max-width: 600px; /* Limit the width for larger screens */
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Optional: Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+.calendar-and-form {
+    display: flex;
+    flex-wrap: wrap; /* Ensures elements stack on smaller screens */
+    justify-content: space-between;
+    align-items: flex-start; /* Aligns items to the top */
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1600px; /* Combined max width for both elements */
+    gap: 20px; /* Space between the calendar and form */
+}
+
+.calendar-container,
+.signup-form-container {
+    flex: 1; /* Both elements take equal space */
+    max-width: 48%; /* Limit individual element width to 48% for proper spacing */
+    min-width: 300px; /* Ensures the layout remains readable on smaller screens */
+    text-align: center;
+}
+
+.calendar-container iframe,
+.signup-form-container iframe {
+    width: 100%;
+    height: 600px; /* Set equal height for both elements */
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for better visibility */
 }
 
 /* Footer Styles */
@@ -243,8 +269,11 @@ footer {
     .hero-image img {
         max-width: 100%;
     }
+    
     .workshop-image img {
-        max-width: 50%; /* Ensure it doesn't exceed the screen width */
+        max-width: 100%; /* Ensure it uses the full available width */
+        min-width: 320px; /* Set a minimum width for better visibility */
+        height: auto; /* Maintain aspect ratio */
     }
     footer {
         font-size: var(--font-size-small);

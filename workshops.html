@@ -4,16 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workshops and Trainings</title>
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-</head>
+
+    <style>
+        /* General styling for the new call-to-action box */
+        .cta-container {
+            margin-bottom: 30px;
+            padding: 25px;
+            border: 1px solid #ddd;
+            border-left: 6px solid #00b4d8; /* Teal accent line */
+            background-color: #f8f8f8; /* Light background for contrast */
+        }
+
+        .cta-container p {
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        
+        /* New reusable class for all links that should look like a button */
+        .button-link {
+            display: inline-block;
+            background-color: #0a2540; /* Navy primary color for the button */
+            color: #ffffff !important; /* !important ensures it overrides any default link color */
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+            margin-bottom: 10px; /* Added spacing below the button */
+        }
+
+        .button-link:hover {
+            background-color: #00b4d8; /* Teal on hover */
+        }
+
+        .planning-ahead-box {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #ccc;
+        }
+
+        /* Ensure standard links (like email/contact) still look like links */
+        .workshops-container a:not(.button-link) {
+            color: #0a2540; /* Set a link color so it's clearly a link */
+            text-decoration: underline;
+        }
+    </style>
+    </head>
 <body>
     <header>
         <div class="nav-header">
-            <!-- Logo -->
             <div class="logo-container">
                 <a href="index.html">
                     <img src="images/Giilogosvg.svg" alt="Logo">
@@ -21,17 +66,15 @@
             </div>
         </div>
 
-        <!-- Menu Button -->
         <button class="menu-btn" id="menu-btn" aria-label="Menu">Menu</button>
                 
-        <!-- Overlay Navigation Menu -->
         <nav id="overlay-menu" class="hidden">
             <button class="close-btn" aria-label="Close">Close</button>
-
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="workshops.html">Workshops and Trainings</a></li>
+                <li><a href="signup.html">Signup</a></li>
                 <li><a href="faq.html" class="active">FAQ</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
@@ -41,14 +84,33 @@
 
     <main class="workshops-page">
         <div class="workshops-container">
+    
             <h1>Workshops and Trainings</h1>
 
-            <h2>40-Hour Community Interpreter® International</h2>
-            <!-- Image under the heading -->
-            <div class="workshop-image">
-                <img src="images/textbook.png" alt="Interactive workshop session">
-            </div>
+            <h2>40-Hour Community Interpreter® International Training</h2>
+            
+            <div class="cta-container">
+                
+                <p>
+                    The <strong>40-Hour Community Interpreter® International Training</strong> is our flagship certification course.
+                </p>
+                
+                <p>
+                    To view the most current cohort dates and to secure your spot, please proceed directly to our dedicated SIGNUP PAGE below.
+                </p>
 
+                <a href="signup.html" class="button-link">
+                    Secure Your Spot & View Dates Now
+                </a>
+
+                <div class="planning-ahead-box">
+                    <p>
+                        <strong>Planning Ahead?</strong>
+                        <br>
+                        If you are interested in dates for next month or wish to sign up in advance for a future cohort, please <a href="contact.html">contact us</a> directly to discuss your scheduling needs.
+                    </p>
+                </div>
+            </div>
             <p>Global Interpreting Innovations offers the <strong>40-Hour Community Interpreter® International</strong>, a nationally recognized training program designed to meet the needs of interpreters in medical, educational, and social service settings. This comprehensive course provides:</p>
             <ul>
                 <li>The foundational knowledge required for professional interpreting.</li>
@@ -101,12 +163,15 @@
 
             <h2>Registration and Fees</h2>
             <ul>
-                <li><strong>Cost:</strong> $500 (payment plans available)</li>
+                <li><strong>Cost:</strong> $400</li>
                 <li><strong>Schedule:</strong> Flexible hours across five sessions, each lasting approximately eight hours with breaks for offline activities.</li>
                 <li><strong>Requirements:</strong> Participants must be at least 18 years old, have a high school diploma or equivalent, and demonstrate oral and written proficiency in their working languages.</li>
             </ul>
-            <p>To secure your spot, register and pay online. Partial payment plans are available, with an upfront payment of $300 and the balance due by the third day of training. For questions or to arrange accommodations for missed hours, please contact us at <a href="mailto:info@globalii.net">info@globalii.net</a>.</p>
 
+            <a href="signup.html" class="button-link">
+                    Secure your spot at our Signup Page
+                </a>
+           
             <h2>Important Information</h2>
             <ul>
                 <li>Training begins promptly at 9:00 a.m. (Central Standard Time) on the first day, with an orientation session to introduce the program.</li>
@@ -121,14 +186,18 @@
                 <li>Refund requests can be submitted via email to <a href="mailto:info@globalii.net">info@globalii.net</a>.</li>
             </ul>
 
-            <h2>Join Us</h2>
-            <p>Take the next step in your interpreting career with Global Interpreting Innovations. Our workshops and trainings empower you with the tools and knowledge to succeed in a rapidly growing field.</p>
-            <p>Visit our <a href="contact.html">Contact Us</a> page to get in touch and register today!</p>
-                    </div>
+            <h2>Signup</h2>
+            <p> Ready to take the next step in your interpreting career? 
+                Visit our SignUp page to register and secure your spot. Registration is quick and easy!
+            </p>
+            <a href="signup.html" class="button-link">Register and Secure your Spot</a>
+            <p>Visit our <a href="contact.html">Contact Us</a> page to get in touch with us!</p>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2024 Global Interpreting Innovations. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
-</bo
+</body>
+</html>
